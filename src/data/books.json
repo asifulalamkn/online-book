@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "Build good habits and break bad ones.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A journey of self-discovery.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg"
+  },
+  {
+    "id": 4,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "Understanding space and time.",
+    "category": "Science",
+    "available_quantity": 2,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Deep Learning",
+    "author": "Ian Goodfellow",
+    "description": "Comprehensive deep learning guide.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780262035613-L.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "description": "Financial education book.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "Modern software development practices.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "description": "History of humankind.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "description": "Success and mindset book.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781585424337-L.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "author": "Stuart Russell",
+    "description": "Core AI textbook.",
+    "category": "Tech",
+    "available_quantity": 2,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780136042594-L.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "Exploring the universe.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "description": "Spiritual enlightenment guide.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781577314806-L.jpg"
+  }
+]
