@@ -54,14 +54,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
       <div className="w-full max-w-md bg-white border border-gray-100 rounded-[32px] p-10 shadow-sm">
-        <button
-          type="button"
-          onClick={handleGoogleLogin}
-          className="w-full mb-6 flex items-center justify-center gap-4 bg-white border-[3px] border-black py-4 rounded-[20px] font-black uppercase tracking-widest text-[11px] hover:bg-gray-50 transition-all active:scale-95 text-black"
-        >
-          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
-          Continue with Google
-        </button>
 
         <div className="text-center mb-8">
           <h1 className="text-3xl font-[900] uppercase tracking-tighter text-black">
@@ -71,6 +63,14 @@ export default function LoginPage() {
             Login to your account
           </p>
         </div>
+        <button
+          type="button"
+          onClick={handleGoogleLogin}
+          className="w-full mb-6 flex items-center justify-center gap-4 bg-white border-[3px] border-black py-4 rounded-[20px] font-black uppercase tracking-widest text-[11px] hover:bg-gray-50 transition-all active:scale-95 text-black"
+        >
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
+          Continue with Google
+        </button>
 
         {errorMsg && (
           <div className="bg-red-50 text-red-600 p-4 rounded-2xl text-[11px] font-bold mb-6 border border-red-100 text-center uppercase tracking-wide">
