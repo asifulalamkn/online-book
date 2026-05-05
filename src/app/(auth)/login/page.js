@@ -9,13 +9,13 @@ export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [mounted, setMounted] = useState(false); 
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -34,7 +34,7 @@ export default function LoginPage() {
           router.refresh();
         },
         onError: (ctx) => {
-          
+
           setErrorMsg(ctx.error.message || "Invalid email or password.");
           setLoading(false);
         },
@@ -42,13 +42,27 @@ export default function LoginPage() {
     });
   };
 
-  
+  const handleGoogleLogin = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
+
   if (!mounted) return null;
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
       <div className="w-full max-w-md bg-white border border-gray-100 rounded-[32px] p-10 shadow-sm">
-        
+        <button
+          type="button"
+          onClick={handleGoogleLogin}
+          className="w-full mb-6 flex items-center justify-center gap-4 bg-white border-[3px] border-black py-4 rounded-[20px] font-black uppercase tracking-widest text-[11px] hover:bg-gray-50 transition-all active:scale-95 text-black"
+        >
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
+          Continue with Google
+        </button>
+
         <div className="text-center mb-8">
           <h1 className="text-3xl font-[900] uppercase tracking-tighter text-black">
             Welcome <span className="text-blue-600">Back</span>
@@ -98,7 +112,7 @@ export default function LoginPage() {
 
         <div className="mt-10 pt-6 border-t border-gray-100 text-center">
           <p className="text-[11px] font-bold uppercase tracking-tight text-gray-400">
-            Don't have an account? 
+            Don't have an account?
             <Link href="/register" className="ml-2 text-blue-600 font-black hover:underline">
               Register Now
             </Link>
