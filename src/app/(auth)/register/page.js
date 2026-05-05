@@ -45,14 +45,9 @@ export default function RegisterPage() {
   };
 
   const handleGoogleLogin = async () => {
-    try {
-      await authClient.signIn.social({
-        provider: "google",
-        callbackURL: "/", 
-      });
-    } catch (err) {
-      setErrorMsg("Google login failed.");
-    }
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   if (!mounted) return null;
@@ -60,7 +55,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-white antialiased">
       <div className="w-full max-w-md">
-        
+
         {/* Title */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-[1000] text-black uppercase tracking-tighter leading-none mb-3">
@@ -81,7 +76,7 @@ export default function RegisterPage() {
         {/* Social Login Button */}
         <button
           type="button"
-          onClick={handleGoogleLogin} 
+          onClick={handleGoogleLogin}
           className="w-full mb-6 flex items-center justify-center gap-4 bg-white border-[3px] border-black py-4 rounded-[20px] font-black uppercase tracking-widest text-[11px] hover:bg-gray-50 transition-all active:scale-95 text-black"
         >
           <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
@@ -95,7 +90,7 @@ export default function RegisterPage() {
         </div>
 
         {/* Registration Form */}
-        <form 
+        <form
           onSubmit={handleRegister}
           className="bg-white border-[3px] border-black rounded-[32px] p-8 md:p-10 shadow-[8px_8px_0px_rgba(0,0,0,0.05)]"
         >

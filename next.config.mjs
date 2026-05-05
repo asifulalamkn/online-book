@@ -4,28 +4,20 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "ui-avatars.com",
+        hostname: "lh3.googleusercontent.com", // Used for Google Account profile pictures
       },
       {
         protocol: "https",
-        hostname: "lh3.googleusercontent.com",
+        hostname: "upload.wikimedia.org", // Used for the direct Wikipedia image link
       },
       {
         protocol: "https",
-        hostname: "covers.openlibrary.org",
+        hostname: "ui-avatars.com", // Used for your fallback avatars
       },
       {
         protocol: "https",
-        hostname: "upload.wikimedia.org",
+        hostname: "www.google.com", // Used for your fallback avatars
       },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.shutterstock.com",
-      }
     ],
   },
 };

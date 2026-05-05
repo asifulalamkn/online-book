@@ -10,9 +10,18 @@ const client = new MongoClient(process.env.MONGO_URI);
 const db = client.db('book');
 
 export const auth = betterAuth({
-  database: mongodbAdapter(db),
-  
-  // এই অংশটি আপনার কোডে ছিল না, এটি যোগ করুন
+  database: mongodbAdapter(db, {
+    client
+  }),
+
+  // Add this to prevent 403 Forbidden errors when switching ports
+  trustedOrigins: [
+    "http://localhost:3000",
+  ],
+
+  // Ensure BetterAuth knows exactly where it is running
+  baseURL: process.env.BETTER_AUTH_URL,
+
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -20,8 +29,8 @@ export const auth = betterAuth({
     },
   },
 
-  emailAndPassword: { 
+  emailAndPassword: {
     enabled: true,
-    autoSignIn: true 
+    autoSignIn: true
   }
 });
